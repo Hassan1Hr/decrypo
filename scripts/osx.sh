@@ -10,7 +10,7 @@ NAME="${TRAVIS_OS_NAME}_${TRAVIS_CPU_ARCH}"
 
 mkdir -p "dist/${NAME}"
 
-CGO_ENABLED=1 go build -ldflags "-s -w -X github.com/ajdnik/decrypo/build.version=${TRAVIS_TAG} -X github.com/ajdnik/decrypo/build.datetime=${TIME}" -o "dist/${NAME}/decrypo"
+CGO_ENABLED=1 go build -ldflags "-s -w -X https://github.com/KasperSvendsenGit/Decrypt-Pluralsight-Videos/build.version=${TRAVIS_TAG} -X https://github.com/KasperSvendsenGit/Decrypt-Pluralsight-Videos/build.datetime=${TIME}" -o "dist/${NAME}/decrypo"
 
 cd "dist/${NAME}" && tar -cvzf "../${NAME}.tar.gz" *
 
